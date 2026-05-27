@@ -3,6 +3,7 @@
 #include "arrays.h"
 #include <stdio.h>
 #include <string.h>
+#include "readLine.h"
 
 int voterCount     = 0;
 int candidateCount = 0;
@@ -15,10 +16,8 @@ void addPosition(){
         printf("Maximum positions reached.\n");
         return;
     }
-    printf("Enter position name: ");
-    fgets(positions[positionCount], NAME_LEN, stdin);
-    // Remove newline character from fgets
-    positions[positionCount][strcspn(positions[positionCount], "\n")] = '\0';
-    positionCount++;
+    printf("Enter position name: \n");
+    readLine(positions[positionCount], NAME_LEN);
+     positionCount++;
      printf("Position added successfully.\n");
 }

@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1779874976 source:c:\users\allan\documents\electionsyst\election_system\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"electLibrary.h"
+
+1779874854 c:\users\allan\documents\electionsyst\election_system\electlibrary.h
+
+1779876824 source:c:\users\allan\documents\electionsyst\election_system\electlibrary.c
+	"electLibrary.h"
+	"struct.h"
+	"arrays.h"
+	<stdio.h>
+	<string.h>
+	"readLine.h"
+
+1779874260 c:\users\allan\documents\electionsyst\election_system\struct.h
+	"electLibrary.h"
+	<stdbool.h>
+	<string.h>
+
+1779872957 c:\users\allan\documents\electionsyst\election_system\arrays.h
+	"struct.h"
+
+1779876259 source:c:\users\allan\documents\electionsyst\election_system\readline.c
+	<stdio.h>
+	<string.h>
+
+1779876228 c:\users\allan\documents\electionsyst\election_system\readline.h
+

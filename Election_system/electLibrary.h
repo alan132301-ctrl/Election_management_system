@@ -1,9 +1,10 @@
 #ifndef ELECTLIBRARY_H
 #define ELECTLIBRARY_H
 
-#define MAX_VOTERS 100
-#define MAX_CANDIDATES 10
-#define NAME_LEN 100
+#define MAX_VOTERS     100
+#define MAX_CANDIDATES 50
+#define MAX_POSITIONS  10
+#define NAME_LEN       50
 
 int isValidPosition(char* pos);
 struct Voter* findVoter(int id);

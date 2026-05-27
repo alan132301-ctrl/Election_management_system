@@ -4,7 +4,7 @@
 #include "electLibrary.h"
 
 
-int main(){ 
+int main(){
     int choice = 0;
     do {
      printf("\n===== UNIVERSITY ELECTION SYSTEM =====\n");
@@ -25,7 +25,7 @@ switch(choice){
 case 1:
     addPosition();
     break;
-case 2:
+/*case 2:
     registerVoter();
     break;
 case 3:
@@ -45,10 +45,10 @@ case 7:
     break;
 case 8:
     displayResults();
-    break;     
+    break;*/
 case 0:
     printf("Exiting the system...\n");
-    break;   
+    break;
 default:
     printf("Invalid selection\n");
 
