@@ -7,12 +7,13 @@
 struct Voter{
 int id;
 char name[NAME_LEN];
-int hasVoted;
+bool hasVoted;
 };
 
 struct Candidate{
 int id;
 char name[NAME_LEN];
+char position[NAME_LEN];
 bool hasVoted;
 };
 #endif // STRUCT_H
