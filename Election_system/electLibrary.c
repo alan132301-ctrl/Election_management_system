@@ -16,10 +16,17 @@ void addPosition(){
         printf("Maximum positions reached.\n");
         return;
     }
+    char pos[NAME_LEN];
     printf("Enter position name: \n");
-    readLine(positions[positionCount], NAME_LEN);
-     positionCount++;
-     printf("Position added successfully.\n");
+    readLine(pos, NAME_LEN);
+    // Check if position already exists
+    if(isValidPosition(pos)){
+        printf("Position already exists.\n");
+        return;
+    }
+    strcpy(positions[positionCount], pos);
+    positionCount++; 
+    printf("Position added successfully.\n");
 }
 
 void registerVoter(){
@@ -152,4 +159,13 @@ void displayResults(){
     for(int i = 0; i < candidateCount; i++){
         printf("Candidate: %s, Position: %s, Votes: %d\n", candidates[i].name, candidates[i].position, candidates[i].votes);
     }
+}
+
+int isValidPosition(char* pos){
+    for(int i = 0; i < positionCount; i++){
+        if(strcmp(positions[i], pos) == 0){
+            return 1;// Position exists
+        }
+    }
+    return 0; // Position does not exist
 }
