@@ -21,3 +21,16 @@ void addPosition(){
      positionCount++;
      printf("Position added successfully.\n");
 }
+
+void registerVoter(){
+    // Code to register a new voter
+    printf("Registering a new voter...\n");
+    if(voterCount >= MAX_VOTERS){
+        printf("Maximum voters reached.\n");
+        return;
+    }
+    printf("Enter voter name: \n");
+    readLine(voters[voterCount].name, NAME_LEN);
+    voterCount++;
+    printf("Voter registered successfully.\n");
+}

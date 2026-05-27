@@ -25,10 +25,10 @@ switch(choice){
 case 1:
     addPosition();
     break;
-/*case 2:
+case 2:
     registerVoter();
     break;
-case 3:
+/*case 3:
     registerCandidate();
     break;
 case 4:
