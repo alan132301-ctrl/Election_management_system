@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1779874976 source:c:\users\allan\documents\electionsyst\election_system\main.c
+1779898664 source:c:\users\allan\documents\electionsyst\election_system\main.c
 	<stdio.h>
 	<stdlib.h>
 	<stdbool.h>

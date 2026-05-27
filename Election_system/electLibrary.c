@@ -9,6 +9,24 @@ int voterCount     = 0;
 int candidateCount = 0;
 int positionCount  = 0;
 
+struct Voter* findVoter(int id){
+    for(int i = 0; i < voterCount; i++){
+        if(voters[i].id == id){
+            return &voters[i];
+        }
+    }
+    return NULL; // Voter not found
+};
+
+struct Candidate* findCandidate(int id){
+    for(int i = 0; i < candidateCount; i++){
+        if(candidates[i].id == id){
+            return &candidates[i];
+        }
+    }
+    return NULL; // Candidate not found
+};
+
 void addPosition(){
     // Code to add a new position for election
     printf("Adding a new position...\n");
@@ -27,7 +45,7 @@ void addPosition(){
     strcpy(positions[positionCount], pos);
     positionCount++; 
     printf("Position added successfully.\n");
-}
+};
 
 void registerVoter(){
     // Code to register a new voter
@@ -44,7 +62,7 @@ void registerVoter(){
     printf("Voter registered successfully with ID %d.\n", voters[voterCount].id);
     voterCount++;
    
-}
+};
 
 void registerCandidate(){
     // code to register a new candidate
@@ -62,7 +80,8 @@ void registerCandidate(){
     readLine(candidates[candidateCount].position, NAME_LEN);
     printf("Candidate registered successfully with ID %d.\n", candidates[candidateCount].id);
     candidateCount++;
-}
+};
+
 void searchRecord(){
     // searching for a voter or candidate record
     printf("Searching for a record...\n");
@@ -86,7 +105,7 @@ void searchRecord(){
     } else {
         printf("Candidate not found.\n");
     }
-}
+};
 
 void updateVoter(){
     // updating voter information
@@ -109,7 +128,7 @@ void updateVoter(){
     } else {
         printf("Voter not found.\n");
     }
-}
+};
 
 void deleteVoter(){
     // deleting a voter record    
@@ -128,7 +147,7 @@ void deleteVoter(){
     } else {
         printf("Voter not found.\n");
     }
-}
+};
 
 void castVote(){
     // Code to cast a vote for a candidate
@@ -156,7 +175,7 @@ void castVote(){
     } else {
         printf("Voter not found.\n");
     }
-}
+};
 
 void displayResults(){
     // Code to display election results
@@ -164,7 +183,7 @@ void displayResults(){
     for(int i = 0; i < candidateCount; i++){
         printf("Candidate: %s, Position: %s, Votes: %d\n", candidates[i].name, candidates[i].position, candidates[i].votes);
     }
-}
+};
 
 int isValidPosition(char* pos){
     for(int i = 0; i < positionCount; i++){
@@ -173,4 +192,4 @@ int isValidPosition(char* pos){
         }
     }
     return 0; // Position does not exist
-}
+};
